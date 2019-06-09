@@ -1,0 +1,7 @@
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\bin\Debug\ExInputServerW.exe.config
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\bin\Debug\ExInputServerW.exe
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\bin\Debug\ExInputServerW.pdb
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.csprojAssemblyReference.cache
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.csproj.CoreCompileInputs.cache
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.exe
+E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.pdb
