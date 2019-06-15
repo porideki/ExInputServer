@@ -5,3 +5,10 @@ E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.c
 E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.csproj.CoreCompileInputs.cache
 E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.exe
 E:\Library\Documents\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.pdb
+C:\workC\C#\ExInputServerW\ExInputServerW\bin\Debug\ExInputServerW.exe.config
+C:\workC\C#\ExInputServerW\ExInputServerW\bin\Debug\ExInputServerW.exe
+C:\workC\C#\ExInputServerW\ExInputServerW\bin\Debug\ExInputServerW.pdb
+C:\workC\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.csprojAssemblyReference.cache
+C:\workC\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.csproj.CoreCompileInputs.cache
+C:\workC\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.exe
+C:\workC\C#\ExInputServerW\ExInputServerW\obj\Debug\ExInputServerW.pdb

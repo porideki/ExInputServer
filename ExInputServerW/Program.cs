@@ -7,6 +7,8 @@ using System.Threading;
 using System.Windows.Forms;
 
 using System.Net;     //IPEndPointクラス
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
 using System.Net.Sockets; //TCPListener、TCPClientクラス
 using System.IO;
 
@@ -14,8 +16,10 @@ namespace ExInputServerW {
     
     class Entry {
 
-        public static string IP = "192.168.3.64";
+        public static string IP = "172.18.4.158";
         public static int PORT = 14230;
+        public static string PROXY_URL = "wwwproxy.kanazawa-it.ac.jp";
+        public static int PROXY_PORT = 8080;
 
         [STAThread]
         static void Main(string[] args) {
@@ -24,17 +28,27 @@ namespace ExInputServerW {
             IPEndPoint ipAdd = new IPEndPoint(IPAddress.Parse(IP), PORT);   //サーバー情報
             TcpListener listener = new TcpListener(ipAdd);  //サーバーソケット
 
-            while (true) {
+            Console.WriteLine("Server > Opened server");
+
+            //IP取得
+            /*
+            IPHostEntry ipentry = Dns.GetHostEntry(Dns.GetHostName());
+            IEnumerable<IPAddress> ips = ipentry.AddressList.Where(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+            foreach (IPAddress ip in ips) Console.WriteLine("Server > " + ip.ToString());
+            */
+            //var Interfaces = NetworkInterface.GetAllNetworkInterfaces().Where(adp => adp.OperationalStatus != OperationalStatus.Up);
+            
+
+                while (true) {
 
                 try {
 
                     //接続待ち
                     listener.Start(0);
-                    //Console.WriteLine("Port:" + PORT + "のListenを開始しました。");
 
                     //接続確立
                     TcpClient client = listener.AcceptTcpClient();  //ソケット
-                    //Console.WriteLine("クライアントが接続しました。");
+                    //client.Connect(PROXY_URL, PROXY_PORT);
 
                     //入力受付
                     TcpConnect tcpConnect = new TcpConnect(client);
@@ -78,7 +92,9 @@ namespace ExInputServerW {
                 try {
 
                     String str;
-                    while ((str = streamReader.ReadLine()) == null) ;
+                    while ((str = streamReader.ReadLine()) == null) Thread.Sleep(100);
+
+                    Thread.Sleep(100);
 
                     //入力処理
                     KeyDispacher.StringDispach(str);
